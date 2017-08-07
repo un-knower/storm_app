@@ -1,0 +1,1 @@
+java -jar F:\tool\redisclient-win32.x86_64.2.0.jar
