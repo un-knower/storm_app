@@ -17,7 +17,6 @@
  * under the License.
  */
 package org.apache.flume.source;
-
 import org.apache.flume.EventDrivenSource;
 import org.apache.flume.annotations.InterfaceAudience;
 import org.apache.flume.annotations.InterfaceStability;

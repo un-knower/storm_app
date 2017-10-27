@@ -1,4 +1,4 @@
-http-parser-2.1.zip
+shttp-parser-2.1.zip
     for srs to support http callback.
 
 nginx-1.5.7.zip

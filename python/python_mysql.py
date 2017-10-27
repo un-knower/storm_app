@@ -15,7 +15,10 @@ cur = conn.cursor()
 #cur.execute("create table student(id int ,name varchar(20),class varchar(30),age varchar(10))")
 
 #插入一条数据
-cur.execute("insert into day_feel(create_time,tag) VALUES(NOW(),'怪罪过去现在不行的')")
+#cur.execute("insert into 哦(create_time,tag) VALUES(NOW(),'')")
+#cur.execute("insert into day_feel(create_time,status,action) VALUES(NOW(),'累','很想打开浏览器')")
+cur.execute("insert into day_feel(create_time,status,action) VALUES(NOW(),'微信','打开微信3次')")
+
 #修改查询条件的数据
 #cur.execute("update student set class='3 year 1 class' where name = 'Tom'")
 

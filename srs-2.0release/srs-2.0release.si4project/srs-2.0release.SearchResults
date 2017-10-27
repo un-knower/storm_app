@@ -1,0 +1,2 @@
+---- publish edge proxy thread send error Matches (1 in 1 files) ----
+SrsEdgeForwarder::proxy in srs_app_edge.cpp (trunk\src\app) :         srs_error("publish edge proxy thread send error, ret=%d", ret);

@@ -28,7 +28,7 @@ export KAFKA_HOME=/usr/local/kafka_2.12-0.10.2.1
 export ZOOKEEPER_HOME=/usr/local/zookeeper-3.4.10
 export MAVEN_HOME=/usr/local/apache-maven-3.5.0
 export FLUME_HOME=/usr/local/apache-flume-1.7.0-bin
-export PATH=$PATH:$STORM_HOME/bin:$KAFKA_HOME/bin:$KAFKA_HOME/bin:$MAVEN_HOME/bin:$FLUME_HOME/bin:/home/gadmin/ob_rel/redis
+export PATH=$PATH:$STORM_HOME/bin:$KAFKA_HOME/bin:$KAFKA_HOME/bin:$MAVEN_HOME/bin:$FLUME_HOME/bin:/home/gadmin/ob_rel/redis:/usr/local/nginx/sbin
 ###########################
 # alias
 #####################

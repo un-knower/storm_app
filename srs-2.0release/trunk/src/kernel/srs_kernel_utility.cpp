@@ -181,7 +181,8 @@ bool srs_is_little_endian()
     // convert to network(big-endian) order, if not equals, 
     // the system is little-endian, so need to convert the int64
     static int little_endian_check = -1;
-    
+    //也就是说虽然它会在程序的整个生命周期中存在，由于它是static的，它不能被其他的函数和源文件访问。
+    //若全局变量仅在单个文件中访问，则可以讲这个变量修改为静态全局变量。
     if(little_endian_check == -1) {
         union {
             int32_t i;

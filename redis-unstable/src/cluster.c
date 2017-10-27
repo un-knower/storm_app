@@ -436,7 +436,8 @@ void clusterInit(void) {
         exit(1);
 
     /* Load or create a new nodes configuration. */
-    if (clusterLoadConfig(server.cluster_configfile) == C_ERR) {
+    if (clusterLoadConfig(server.cluster_configfile) == C_ERR) 
+	{
         /* No configuration found. We will just use the random name provided
          * by the createClusterNode() function. */
         myself = server.cluster->myself =

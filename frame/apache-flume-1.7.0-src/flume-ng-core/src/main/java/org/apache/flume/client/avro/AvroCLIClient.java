@@ -115,6 +115,11 @@ public class AvroCLIClient {
         }
       }
     }
+
+
+
+
+	
   }
 
   private boolean parseCommandLine(String[] args) throws ParseException {

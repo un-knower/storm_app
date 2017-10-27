@@ -356,7 +356,8 @@ void SrsMessageQueue::shrink()
     
     // remove all msg
     // igone the sequence header
-    for (int i = 0; i < (int)msgs.size(); i++) {
+    for (int i = 0; i < (int)msgs.size(); i++) 
+	{
         SrsSharedPtrMessage* msg = msgs.at(i);
 
         if (msg->is_video() && SrsFlvCodec::video_is_sequence_header(msg->payload, msg->size)) {

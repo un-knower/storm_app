@@ -1,1 +1,1 @@
-/home/gadmin/ob_rel/redis/redis-server /home/gadmin/ob_rel/redis/redis.conf& 
+/usr/local/redis-4.0.2/redis-server /usr/local/redis-4.0.2/redis.conf& 

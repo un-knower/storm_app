@@ -1,0 +1,8 @@
+---- ngx_http_init_request Matches (7 in 1 files) ----
+ngx_http_request.c (src\http) line 13 : static void ngx_http_init_request(ngx_event_t *ev);
+ngx_http_init_connection in ngx_http_request.c (src\http) :     rev->handler = ngx_http_init_request;
+ngx_http_init_connection in ngx_http_request.c (src\http) :         ngx_http_init_request(rev);
+ngx_http_request.c (src\http) line 238 : ngx_http_init_request(ngx_event_t *rev)
+ngx_http_set_keepalive in ngx_http_request.c (src\http) :              * the pipelined request (see ngx_http_init_request()).
+ngx_http_set_keepalive in ngx_http_request.c (src\http) :         rev->handler = ngx_http_init_request;
+ngx_http_keepalive_handler in ngx_http_request.c (src\http) :     ngx_http_init_request(rev);

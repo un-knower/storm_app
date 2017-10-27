@@ -2147,7 +2147,8 @@ vector<string> SrsConfig::get_listens()
     std::vector<string> ports;
     
     SrsConfDirective* conf = root->get("listen");
-    if (!conf) {
+    if (!conf) 
+		{
         return ports;
     }
     

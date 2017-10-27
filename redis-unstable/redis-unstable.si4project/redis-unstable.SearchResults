@@ -1,0 +1,2 @@
+---- CLUSTERDOWN Hash slot not served Matches (1 in 1 files) ----
+clusterRedirectClient in cluster.c (src) :         addReplySds(c,sdsnew("-CLUSTERDOWN Hash slot not served\r\n"));

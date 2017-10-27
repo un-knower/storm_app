@@ -140,6 +140,7 @@ SrsStreamListener::~SrsStreamListener()
     srs_freep(listener);
 }
 
+//封装调用
 int SrsStreamListener::listen(string i, int p)
 {
     int ret = ERROR_SUCCESS;
@@ -149,7 +150,7 @@ int SrsStreamListener::listen(string i, int p)
 
     srs_freep(listener);
     listener = new SrsTcpListener(this, ip, port);
-
+    //import 
     if ((ret = listener->listen()) != ERROR_SUCCESS) {
         srs_error("tcp listen failed. ret=%d", ret);
         return ret;
@@ -583,6 +584,7 @@ int SrsServer::initialize(ISrsServerCycle* cycle_handler)
     signal_manager = new SrsSignalManager(this);
     
     handler = cycle_handler;
+	// cycle_handler first is null
     if(handler && (ret = handler->initialize()) != ERROR_SUCCESS){
         return ret;
     }
@@ -739,7 +741,7 @@ int SrsServer::acquire_pid_file()
 int SrsServer::listen()
 {
     int ret = ERROR_SUCCESS;
-    
+    //会建立一个rtmp的steamlistener
     if ((ret = listen_rtmp()) != ERROR_SUCCESS) {
         return ret;
     }
@@ -959,14 +961,16 @@ int SrsServer::do_cycle()
     bool asprocess = _srs_config->get_asprocess();
     
     // the deamon thread, update the time cache
-    while (true) {
+    while (true) 
+	{   
+	    //这个代码是错误的 不尽入这样逻辑
         if(handler && (ret = handler->on_cycle((int)conns.size())) != ERROR_SUCCESS){
             srs_error("cycle handle failed. ret=%d", ret);
             return ret;
         }
             
         // the interval in config.
-        int heartbeat_max_resolution = (int)(_srs_config->get_heartbeat_interval() / SRS_SYS_CYCLE_INTERVAL);
+        int heartbeat_max_resolution = (int)(_srs_config->get_heartbeat_interval() / SRS_SYS_CYCLE_INTERVAL); //1000
         
         // dynamic fetch the max.
         int temp_max = max;
@@ -1000,7 +1004,8 @@ int SrsServer::do_cycle()
 #endif
         
             // do reload the config.
-            if (signal_reload) {
+            if (signal_reload) 
+			{
                 signal_reload = false;
                 srs_info("get signal reload, to reload the config.");
                 
@@ -1075,10 +1080,12 @@ int SrsServer::listen_rtmp()
     // stream service port.
     std::vector<std::string> ip_ports = _srs_config->get_listens();
     srs_assert((int)ip_ports.size() > 0);
-    
+
+	//删除历史数据
     close_listeners(SrsListenerRtmpStream);
     
-    for (int i = 0; i < (int)ip_ports.size(); i++) {
+    for (int i = 0; i < (int)ip_ports.size(); i++) 
+	{
         SrsListener* listener = new SrsStreamListener(this, SrsListenerRtmpStream);
         listeners.push_back(listener);
         
