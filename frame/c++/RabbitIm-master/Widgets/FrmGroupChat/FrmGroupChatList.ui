@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CFrmGroupChatList</class>
+ <widget class="QWidget" name="CFrmGroupChatList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Group chat rooms</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+  </layout>
+  <action name="actionNew_Search_group_chat_rooms">
+   <property name="icon">
+    <iconset resource="../../Resource/Resource.qrc">
+     <normaloff>:/icon/Search</normaloff>:/icon/Search</iconset>
+   </property>
+   <property name="text">
+    <string>New/Search group chat rooms</string>
+   </property>
+   <property name="toolTip">
+    <string>New/Search group chat rooms</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="actionLeave_room">
+   <property name="icon">
+    <iconset resource="../../Resource/Resource.qrc">
+     <normaloff>:/icon/Left</normaloff>:/icon/Left</iconset>
+   </property>
+   <property name="text">
+    <string>Leave room</string>
+   </property>
+   <property name="toolTip">
+    <string>Leave room</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+L</string>
+   </property>
+  </action>
+  <action name="actionCreate_chat_room">
+   <property name="text">
+    <string>Create chat room</string>
+   </property>
+   <property name="toolTip">
+    <string>Create chat room</string>
+   </property>
+  </action>
+  <action name="actionJoin_chat_room">
+   <property name="text">
+    <string>Join chat room</string>
+   </property>
+   <property name="toolTip">
+    <string>Join chat room</string>
+   </property>
+  </action>
+  <action name="actionRoom_infomation">
+   <property name="text">
+    <string>Room infomation</string>
+   </property>
+  </action>
+  <action name="actionOpen_chat_room">
+   <property name="text">
+    <string>Open chat room</string>
+   </property>
+  </action>
+  <action name="actionInviter">
+   <property name="text">
+    <string>Inviter</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../Resource/Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,11 @@
+---- --from Matches (10 in 3 files) ----
+tests.kafkatest.services.console_consumer in console_consumer.py (tests\kafkatest\services) : --from-beginning                        If the consumer does not already have
+tests.kafkatest.services.console_consumer...start_cmd in console_consumer.py (tests\kafkatest\services) :             cmd += " --from-beginning"
+quickstart.html (docs) line 86 : &gt; bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+quickstart.html (docs) line 173 : &gt; bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic my-replicated-topic
+quickstart.html (docs) line 203 : &gt; bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic my-replicated-topic
+quickstart.html (docs) line 266 : &gt; bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
+quickstart.html (docs\streams) line 177 :     --from-beginning \
+quickstart.html (docs\streams) line 204 :     --from-beginning \
+quickstart.html (docs\streams) line 237 :     --from-beginning \
+quickstart.html (docs\streams) line 271 :     --from-beginning \

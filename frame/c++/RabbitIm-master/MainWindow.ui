@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>RabbitIm</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>250</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOperator_O">
+    <property name="title">
+     <string>Operator(&amp;O)</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp_H">
+    <property name="title">
+     <string>Help(&amp;H)</string>
+    </property>
+    <addaction name="actionAbout_A"/>
+   </widget>
+   <widget class="QMenu" name="menuTool_T">
+    <property name="title">
+     <string>Tool(&amp;T)</string>
+    </property>
+    <addaction name="actionScan_qrencode_S"/>
+    <addaction name="actionOptions_O"/>
+   </widget>
+   <addaction name="menuOperator_O"/>
+   <addaction name="menuTool_T"/>
+   <addaction name="menuHelp_H"/>
+  </widget>
+  <action name="actionAbout_A">
+   <property name="icon">
+    <iconset resource="Resource/Resource.qrc">
+     <normaloff>:/icon/Information</normaloff>:/icon/Information</iconset>
+   </property>
+   <property name="text">
+    <string>About(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionEnglish_E">
+   <property name="text">
+    <string>English(&amp;E)</string>
+   </property>
+  </action>
+  <action name="actionChinese_C">
+   <property name="text">
+    <string>Chinese(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionOptions_O">
+   <property name="icon">
+    <iconset resource="Resource/Resource.qrc">
+     <normaloff>:/icon/Options</normaloff>:/icon/Options</iconset>
+   </property>
+   <property name="text">
+    <string>Options(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionScan_qrencode_S">
+   <property name="icon">
+    <iconset resource="Resource/Resource.qrc">
+     <normaloff>:/icon/Scan</normaloff>:/icon/Scan</iconset>
+   </property>
+   <property name="text">
+    <string>Scan QR code(&amp;S)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Resource/Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

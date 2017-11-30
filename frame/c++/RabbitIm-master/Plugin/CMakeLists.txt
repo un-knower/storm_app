@@ -1,0 +1,7 @@
+file(GLOB dirs *)
+foreach(d ${dirs})
+    IF(IS_DIRECTORY ${d})
+        file(RELATIVE_PATH relative_dir ${CMAKE_CURRENT_SOURCE_DIR} ${d})
+        add_subdirectory(${relative_dir})
+    ENDIF()
+endforeach(d)

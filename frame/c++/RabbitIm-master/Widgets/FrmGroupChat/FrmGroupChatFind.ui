@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CFrmGroupChatFind</class>
+ <widget class="QFrame" name="CFrmGroupChatFind">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>424</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Search group chat rooms</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Group chat servers:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CCustomTreeView" name="treeView"/>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Group chat rooms:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListView" name="listView"/>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pbNew">
+       <property name="toolTip">
+        <string>New Room</string>
+       </property>
+       <property name="text">
+        <string>New(&amp;N)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbJoin">
+       <property name="toolTip">
+        <string>Join room</string>
+       </property>
+       <property name="text">
+        <string>Join(&amp;J)</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../Resource/Resource.qrc">
+         <normaloff>:/icon/Add</normaloff>:/icon/Add</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbRefresh">
+       <property name="toolTip">
+        <string>Refresh group chat servers</string>
+       </property>
+       <property name="text">
+        <string>Refresh(&amp;R)</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../Resource/Resource.qrc">
+         <normaloff>:/icon/Refresh</normaloff>:/icon/Refresh</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbCancel">
+       <property name="toolTip">
+        <string>Cancel</string>
+       </property>
+       <property name="text">
+        <string>Cancel(&amp;C)</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../Resource/Resource.qrc">
+         <normaloff>:/icon/Delete</normaloff>:/icon/Delete</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CCustomTreeView</class>
+   <extends>QTreeView</extends>
+   <header location="global">CustomTreeView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../Resource/Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
