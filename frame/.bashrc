@@ -55,12 +55,16 @@ alias cdredis="cd /usr/local/redis-3.2.9"
 #go
 ##############
 #根目录
-export GOROOT=/usr/local/go
+export GOROOT=/home/gadmin/local/go
 #bin目录
 export GOBIN=$GOROOT/bin
 #工作目录
-export GOPATH=/home/gadmin/mygo
-export PATH=$PATH:$GOPATH:$GOBIN
+export GOPATH=/home/gadmin/code
+export PATH=$PATH:$GOPATH:$GOBIN:$GOPATH/bin
+###########################
+# alias
+#####################
+alias c="source ~/.bashrc"
 
 #############
 #python
