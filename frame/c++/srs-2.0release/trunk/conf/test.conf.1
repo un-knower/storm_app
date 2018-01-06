@@ -1,0 +1,19 @@
+# the config for srs origin-edge cluster
+# @see https://github.com/ossrs/srs/wiki/v1_CN_Edge
+# @see full.conf for detail config.
+
+listen              2935;
+max_connections     1000;
+pid                 objs/srs.pid;
+srs_log_file        ./objs/srs.log;
+daemon              off;
+
+http_api {
+     enabled     on;
+     listen      2980;
+     crossdomain on;
+}
+
+vhost __defaultVhost__ {
+	min_latency     on;
+}
